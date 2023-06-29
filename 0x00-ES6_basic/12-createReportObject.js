@@ -6,6 +6,10 @@ export default function createReportObject(employeesList) {
       return Object.keys(departments).length;
     },
   };
-  for (const depts of employeesList) reportObject.allEmployees[depts] = employeesList[depts];
+  for (const depts in employeesList) {
+    if (Object.prototype.hasOwnProperty.call(employeesList, depts)) {
+      reportObject.allEmployees[depts] = employeesList[depts];
+    }
+  }
   return reportObject;
 }
