@@ -1,4 +1,3 @@
-import handleResponseFromAPI from "./2-then";
+import handleProfileSignup from './6-final-user';
 
-const promise = Promise.resolve();
-handleResponseFromAPI(promise);
+console.log(handleProfileSignup("Bob", "Dylan", "bob_dylan.jpg"));
