@@ -26,7 +26,7 @@ async function countStudents(path) {
           output.push(`Number of students in ${field}: ${studentsObject[field].length}. List: ${studentsObject[field].join(', ')}`);
         });
         console.log(output.join('\n'));
-        resolve(output.join('\n'));
+        resolve(true);
       }
     });
   });
